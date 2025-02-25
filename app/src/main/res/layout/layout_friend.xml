@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/gry_claire"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="1dp"
+    android:orientation="horizontal"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profilpic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img2"
+        app:shapeAppearanceOverlay="@style/circular" />
+
+    <TextView
+        android:id="@+id/friend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:fontFamily="sans-serif"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="10dp"
+        android:shadowColor="#a9afb8"
+        android:text="wiam taazizt"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:iconPadding="0dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="3px"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_gravity="center"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:src="@drawable/three_point"/>
+
+</LinearLayout>

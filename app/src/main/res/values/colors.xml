@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#298484</color>
+    <color name="ashen">#F2EDED</color>
+    <color name="ashen1">#BBBBBB</color>
+    <color name="blue_claire">#298484</color>
+    <color name="gry">#9A9A9A</color>
+    <color name="gry_claire">#F4F6F9</color>
+    <color name="dark">#484042</color>
+    <color name="softwhite">#c4cbde</color>
+    <color name="softbeige">#ececec</color>
+    <color name="gray">#7e8584</color>
+    <color name="likeButtonColor">#706c6c</color>
+    <color name="vertlogo">#298484</color>
+    <color name="vert">#298484</color>
+
+
+
+
+</resources>

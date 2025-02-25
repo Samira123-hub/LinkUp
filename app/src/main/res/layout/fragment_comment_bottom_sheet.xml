@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corners_comments"
+    android:padding="16dp">
+
+    <!-- Titre de la section commentaires -->
+    <TextView
+        android:id="@+id/commentsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comments"
+        android:textColor="#2B2B2B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
+
+    <!-- Zone pour ajouter un commentaire -->
+    <EditText
+        android:id="@+id/addComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write your comment..."
+        android:textColorHint="#2B2B2B"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="16dp" />
+
+    <!-- Bouton pour soumettre un commentaire -->
+    <Button
+        android:id="@+id/commentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post Comment"
+        android:backgroundTint="#298484"
+        android:layout_gravity="end"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/listComment"
+        />
+
+</LinearLayout>

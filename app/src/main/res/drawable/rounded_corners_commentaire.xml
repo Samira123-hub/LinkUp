@@ -1,0 +1,15 @@
+<!-- res/drawable/rounded_corners.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Couleur de fond -->
+    <solid android:color="#FFF" /> <!-- Utilise la couleur que tu souhaites -->
+
+    <!-- Coins arrondis -->
+    <corners android:radius="90dp" /> <!-- Ajuste la taille du rayon ici -->
+
+    <!-- Optionnel : Bordure autour du layout -->
+    <stroke
+        android:width="0.3dp"
+        android:color="#a0a29e" /> <!-- Blanc pour la bordure -->
+</shape>

@@ -1,0 +1,18 @@
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fond de l'élément -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" /> <!-- Couleur de fond transparente -->
+        </shape>
+    </item>
+
+    <!-- Ligne en haut -->
+    <item android:left="-2dp" android:right="-2dp" android:top="-2dp" android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="0.2dp"
+                android:color="#2B2B2B" /> <!-- Couleur de la ligne -->
+        </shape>
+    </item>
+</layer-list>

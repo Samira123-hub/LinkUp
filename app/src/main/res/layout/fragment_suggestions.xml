@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Suggestions">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="34dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateTint="@color/gray"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/no_suggestions_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aucun utilisateur"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="3dp"
+        android:gravity="center"/>
+
+
+    <ListView
+        android:background="@color/white"
+        android:id="@+id/suggestion"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

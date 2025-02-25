@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.loginregister.Register"
+    android:orientation="vertical"
+
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+       android:adjustViewBounds="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/otp_background"
+        />
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/round_back_dark_blue5_15"
+        android:inputType="textWebEmailAddress"
+        android:maxLines="1"
+        android:textColor="@color/green"
+       android:paddingStart="20dp"
+        android:hint="Email"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+       />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/verifyBtn"
+        android:layout_width="220dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/round_back_primary_15"
+        android:text="Verify"
+        android:layout_marginBottom="15dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't receive code ?"/>
+    <TextView
+        android:id="@+id/resendBtn"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend Code"
+        android:textColor="#298484"
+        android:textStyle="bold"/>
+        </LinearLayout>
+
+</LinearLayout>

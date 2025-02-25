@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Invetations">
+    <TextView
+        android:id="@+id/no_invitations_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aucune invitation"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"/>
+    <ListView
+        android:background="@color/white"
+        android:id="@+id/invitationslist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        />
+</FrameLayout>

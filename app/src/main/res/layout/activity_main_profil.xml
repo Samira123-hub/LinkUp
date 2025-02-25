@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profil"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- ScrollView to allow scrolling if content exceeds the screen height -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/imagesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Cover Photo (First Image) -->
+
+
+                <ImageView
+                    android:id="@+id/coverPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="Description of image 1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profilPhoto"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="75dp"
+                    android:background="@color/softwhite"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/coverPhoto"
+                    app:shapeAppearanceOverlay="@style/circular"
+                    app:srcCompat="@drawable/person"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="5dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/coverPhotoChangeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:tint="@color/black"
+                    app:backgroundTint="@color/white"
+                    app:fabSize="mini"
+                    android:contentDescription="Description of image 1"
+                    app:layout_constraintBottom_toBottomOf="@+id/coverPhoto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:shapeAppearanceOverlay="@style/circular"
+                    app:srcCompat="@drawable/ic_photo_camera_black_48dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/profilPhotoChangeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="1dp"
+                    android:contentDescription="Description of image 1"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:tint="@color/black"
+                    app:backgroundTint="@color/white"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="@+id/profilPhoto"
+                    app:layout_constraintEnd_toEndOf="@+id/profilPhoto"
+                    app:shapeAppearanceOverlay="@style/circular"
+                    app:srcCompat="@drawable/camera" />
+
+
+
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Samira Rastellaqa"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profilPhoto" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profilPic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/softwhite"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="4dp"
+                    app:shapeAppearanceOverlay="@style/circular"
+                    app:srcCompat="@drawable/person"
+                    android:layout_marginLeft="15dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/section1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:padding="7dp"
+                    android:background="@drawable/rounded_corners"
+                    android:layout_below="@id/header"
+                    >
+
+                    <EditText
+                        android:id="@+id/createPubButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:hint="What's on your head ?"
+                        android:textColorHint="@color/black"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+<!--    Icons layout        -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:padding="15dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/postIcon"
+                    android:contentDescription="Posts section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/softbeige"
+                    android:gravity="center"
+                    app:icon="@drawable/posts"
+                    app:iconTint="@color/black"
+                    app:iconGravity="textStart"
+                    app:iconSize="39dp"
+                    android:layout_marginRight="5dp"
+                    app:strokeColor="@color/softbeige"
+                    app:strokeWidth="1dp"
+                    android:tooltipText="Posts"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/imageIcon"
+                    android:contentDescription="Image section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/softbeige"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    app:icon="@drawable/images"
+                    app:iconTint="@color/black"
+                    app:iconGravity="textStart"
+                    app:iconSize="39dp"
+                    app:strokeColor="@color/softbeige"
+                    app:strokeWidth="1dp"
+                    android:tooltipText="Images"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/friendsIcon"
+                    android:contentDescription="Friends section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/softbeige"
+                    android:gravity="center"
+                    app:icon="@drawable/friends"
+                    app:iconTint="@color/black"
+                    app:iconGravity="textStart"
+                    android:layout_marginRight="5dp"
+                    app:iconSize="39dp"
+                    app:strokeColor="@color/softbeige"
+                    app:strokeWidth="1dp"
+                    android:tooltipText="Friends"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/aboutIcon"
+                    android:contentDescription="About me section"
+                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="@color/softbeige"
+                    android:gravity="center"
+                    app:icon="@drawable/about"
+                    app:iconTint="@color/black"
+                    app:iconGravity="textStart"
+                    app:iconSize="39dp"
+                    app:strokeColor="@color/softbeige"
+                    app:strokeWidth="1dp"
+                    android:tooltipText="About me"
+                    />
+
+            </LinearLayout>
+
+           <!--    Add a line to separete sections        -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:elevation="5dp"
+                android:translationZ="2dp"/>
+
+<!--            display pubs-->
+            <LinearLayout
+                android:id="@+id/postsContainer"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ListView
+                    android:id="@+id/postsListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="10000dp"
+                    android:layout_weight="1"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="4dp"/>
+
+            </LinearLayout>
+<!--start here -->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:background="@drawable/pub_borders"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingBottom="10dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <com.google.android.material.imageview.ShapeableImageView-->
+<!--                        android:id="@+id/pubProfilPic"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_marginLeft="15dp"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:background="@color/softwhite"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        app:shapeAppearanceOverlay="@style/circular"-->
+<!--                        app:srcCompat="@drawable/person" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/pubUserName"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:text="Samira Rastellaqa🥳"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="20dp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/dateTimePub"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:layout_marginTop="0dp"-->
+<!--                            android:text="24/12/2003 12:30"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="10sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/pubText"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:layout_marginRight="20dp"-->
+<!--                    android:text="Hi everyone so happy to see you again"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="normal" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="261dp"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginRight="20dp"c-->
+<!--                    android:padding="0dp"-->
+<!--                    app:srcCompat="@drawable/futur_house"-->
+
+<!--                    />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="0dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/likeButton"-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginRight="20dp"-->
+<!--                        android:backgroundTint="#706c6c"-->
+<!--                        android:text="Like"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        app:icon="@drawable/coeur"-->
+<!--                        app:iconTint="@color/white"-->
+<!--                        />-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/commentButton"-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:backgroundTint="#706c6c"-->
+<!--                        android:text="Comment"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        app:icon="@drawable/commentaire2"-->
+<!--                        app:iconTint="@color/white"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+
+
+<!--            </LinearLayout>-->
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

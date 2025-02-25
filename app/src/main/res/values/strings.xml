@@ -1,0 +1,8 @@
+<resources>
+    <array name="gender">
+        <item>female</item>
+        <item>male</item>
+    </array>
+    <string name="default_notification_channel_id">default_channel</string>
+    <string name="fcm_message">FCM Message</string>
+</resources>

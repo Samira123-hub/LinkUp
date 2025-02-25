@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icone"
+        android:label="Link Up"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HomePage2"
+        tools:targetApi="31">
+        <activity
+            android:name=".motdepasse"
+            android:exported="false" />
+        <activity
+            android:name=".Information"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.homepage2.MainActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.example.loginregister.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.loginregister.Activity_signup"
+            android:exported="false" />
+        <activity
+            android:name="com.example.loginregister.Login"
+            android:exported="false" />
+        <activity
+            android:name="com.example.loginregister.MainActivity1"
+            android:exported="false" />
+        <activity
+            android:name="com.example.loginregister.MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name="com.example.loginregister.MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name="com.example.loginregister.MainActivity5"
+            android:exported="false" />
+        <activity
+            android:name="com.example.loginregister.Register"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chatlinkup.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chatlinkup.MainActivitymessage"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chatlinkup.suggestion_d_amis"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.Profil"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.notifications"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.about"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.friends"
+            android:exported="false" />
+        <activity
+            android:name="com.example.project.photos"
+            android:exported="false" />
+    </application>
+
+</manifest>

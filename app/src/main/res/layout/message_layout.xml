@@ -1,0 +1,97 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main1"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chatlinkup.MainActivitymessage">
+    <LinearLayout
+        android:id="@+id/horiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#f7f7f7"
+        android:gravity="center"
+        android:layout_marginBottom="0dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/informatique"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:id="@+id/nomTextView"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sara Farsi"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Ligne de séparation -->
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/horiz"
+        android:layout_marginTop="5dp"
+        android:background="@color/gry_claire" />
+
+    <!-- RecyclerView pour les messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/line"
+        android:layout_above="@+id/layoutmessage"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Boîte de saisie de message en bas -->
+    <LinearLayout
+        android:id="@+id/layoutmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/envoyer_message"
+            android:hint="Entrez votre message"
+            android:textColorHint="@color/gry"
+            android:textColor="@color/gry"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/buttonSend"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/envoyer_button"
+            android:src="@drawable/baseline_label_important_24"
+            android:text="Envoyer" />
+    </LinearLayout>
+
+</RelativeLayout>
